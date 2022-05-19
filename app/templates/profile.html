@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{% block contents %}
+{% for message in get_flashed_message %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{message}}
+</div>
+{% endfor %}
+
+<h1>Add to Blog</h1>
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <form method="POST">
+        {{form.hidden_tag()}}
+
+        {{form.title.label(class="form-label")}}
+        {{form.title(class="form-control")}}
+
+        {{form.author.label(class="form-label")}}
+        {{form.author(class="form-control")}}
+
+        {{form.content.label(class="form-label")}}
+        {{form.content(class="form-control")}}
+
+
+
+    </form>
+</div>
+
+{% endblock %}

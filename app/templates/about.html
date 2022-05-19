@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{%block content%}
+
+<div class="container d-flex justify-content-center">
+<div class="card" style="width: 20rem;">
+    <img src="{{url_for('static',filename='images/me.jpeg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h1 class="card-title text-uppercase">About Me</h1>
+        <p class="card-text text-center">
+            I've never been a big admirer of self-promotion. I'm never quite sure what to say. When someone says, "Tell me about yourself," I usually find it cliche. Why not ask the questions you've been thinking about? I'm sure you had an idea of what you wanted to ask when that notion occurred to you. <br> <br> But I'll tell you a little bit about myself. I enjoy reading. It brings me great joy and relieves my tension. I enjoy living a fantasy because life is difficult and we need to find joy in the small things. My safe havens are books. So when I'm mad, angry, sad, or depressed, I read. Basically, I read at any given moment.  
+        </p>
+    </div>
+</div>
+</div>
+
+
+{%endblock%}

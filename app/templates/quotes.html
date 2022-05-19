@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+<title>{% block title%} Quotes {%endblock%}</title>
+
+{%block content%}
+
+<section>
+    <h1 class="text-center mb-5 text-light" > Random Quotes </h1>
+
+    <div class="container mb-5">
+        <h3 class="text-center text-capitalize"> {{id}} </h3>
+        <div class="row">
+            {% for quote in quotes%}
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text fw-bold"> Author: {{quotes['author']}}</p>
+                        <p class="card-text">{{quotes['quote']}}</p>
+                        <a href="">
+                            <button type="button" class="btn" style="color: #6ABEA7;" target="blank"> Refresh for new quotes</button>
+                        </a>
+                    </div>
+                    <div class="card-footer">
+                        <p>  </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
